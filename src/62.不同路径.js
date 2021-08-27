@@ -29,7 +29,7 @@ var uniquePaths = function (m, n) {
 };
 // @lc code=end
 
-function uniquePaths1() {
+function uniquePaths1(m, n) {
   const cur = Array(n).fill(1);
   for (let i = 1; i < m; i++) {
     for (let j = 1; j < n; j++) {
