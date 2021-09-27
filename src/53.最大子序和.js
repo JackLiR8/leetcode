@@ -20,5 +20,3 @@ var maxSubArray = function(nums) {
 // @lc code=end
 
 maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
-
-// TODO 还不理解？
