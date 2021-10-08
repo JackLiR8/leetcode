@@ -16,10 +16,9 @@ var canPartition = function(nums) {
   const dp = Array(sum + 1).fill(false)
   dp[0] = true
   for (let i = 0; i < nums.length; i++) {
-    for (let j = sum; j >= 0; j--) {
-      if (j - nums[i] >= 0) {
-        dp[j] = dp[j] || dp[j - nums[i]]
-      }
+    // j - nums[i] < 0 时 dp[j] 不变，故循环条件可设为 j - nums[i] >= 0
+    for (let j = sum; j - nums[i] >= 0; j--) {
+      dp[j] = dp[j] || dp[j - nums[i]]
     }
   }
   return dp[sum]
